@@ -1,0 +1,61 @@
+.horseRace_wrapper{
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+}
+.startRace{
+width: 84px;
+height: 84px;
+border-radius: 50%;
+margin: 2rem auto;
+text-decoration:none;
+background: rgb(0, 132, 255);
+cursor: pointer;
+color: white;
+font-size: 1.2rem;
+text-transform: uppercase;
+}
+.startRace:hover{
+   transform: scale(1.1);
+}
+.startRace:active{
+   transform: scale(0.9);
+}
+.progressBar{
+   margin: 1rem;
+}
+.horseProgress_wrapper{
+   display: flex;
+   margin: 1rem 0 0 0;
+}
+.horseProgress_name{
+   width: 200px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.horseProgress_bar{
+   height: 30px;
+   width: 100%;
+   border: 1px solid rgba(0, 0, 0, 0.208);
+   border-bottom-right-radius: 1rem;
+   border-top-right-radius: 1rem;
+   margin: 0 1rem 0 0
+}
+.horseProgress_status{
+   height: 100%;
+   transition: 1s;
+   transition-timing-function: linear; 
+   border-top-right-radius: 1rem;
+   border-bottom-right-radius: 1rem;
+}
+.horseProgress_place{
+min-width: 30px;
+height: 30px;
+border: 1px solid rgba(0, 0, 0, 0.208);
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 2rem;
+}

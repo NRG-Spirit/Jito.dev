@@ -1,0 +1,15 @@
+.history_wrapper{
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   font-size: 1rem;
+}
+.history_title{
+   text-align: center;
+}
+.history_race{
+   margin: 0 auto;
+}
+.history_place{
+   display: flex;
+}
