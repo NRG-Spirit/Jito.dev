@@ -15,6 +15,7 @@ function HorseRace() {
 
   useEffect(() => {
     socket.on('ticker', round => {
+      console.log('ds');
       dispatch(setRace(round));
       handleWinner(round);
       if (places.length === 6) {
@@ -24,21 +25,19 @@ function HorseRace() {
   }, [socket, dispatch, places]);
 
   const handleWinner = (round) => {
-    round.map(horse => {
-      if (horse.distance === 1000 && !places.includes(horse.name)) {
-        let i = places;
-        i.push(horse.name);
-        setPlaces(i);
+    for (let i=0; i<round.length; i++) {
+      if (round[i].distance === 1000 && !places.includes(round[i].name)) {
+        let arr = places;
+        arr.push(round[i].name);
+        setPlaces(arr);
       }
     }
-    )
   }
   const handleFinish = () => {
     socket.disconnect();
     dispatch(setHistory(places));
     setIsRace(false);
   }
-
   const startRace = () => {
     setPlaces([]);
     setIsRace(true);
